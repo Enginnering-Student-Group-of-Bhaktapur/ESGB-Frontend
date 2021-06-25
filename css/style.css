@@ -1,0 +1,106 @@
+body{
+    background-color: #ebecf0;
+}
+
+.container{
+    padding: 0%;
+}
+
+.bg-mainColor{
+    background-color: #110328;
+}
+
+/* top bar */
+#top_bar_section{
+    background-color: #110328;
+    color: #fff;
+}
+
+#top_bar_section a{
+    color: blanchedalmond;
+    text-decoration: none;
+}
+
+/* end of top bar */
+
+/* navigation bar */
+nav{
+    background-color: #211836;
+    color: #ffffff!important;
+}
+/* end of navigation bar */
+
+
+/* banner section */
+#banner{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.67), rgba(23, 9, 46, 0.9)),
+    url('../img/banner_1.jpg');    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+
+}
+
+.banner_text{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 40vh;
+}
+
+.banner_text h2{
+    margin-top: 100px;
+}
+
+.banner_text p{
+    margin-top: 30px;
+}
+/* end of banner section  */
+
+
+/* basic info section */
+#basic_info{
+    color: #fff;
+}
+
+/* end of basic info section */
+
+/* footer  */
+footer{
+    background-color: #211836;
+    color: white;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+/* end of footer  */
+
+/* About Page */
+.team_member{
+    color: white;
+    cursor: pointer;
+}
+
+.team_member img{
+    width: 100%;
+}
+
+.team_member .member_detail .name{
+    color: #000000;
+}
+
+.team_member .member_detail .position{
+    color: #232323;
+    font-weight: 400;
+}
+
+/* events page  */
+.event_shadow_bg{
+    background-color: #e0e4ee !important;
+}
