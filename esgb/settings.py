@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-y2qo!l5w*$45_=l9cv^xjub@h16wv0#si#%21akm!@39ggc878
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['88217404eb6f.ngrok.io', '127.0.0.1']
 
 
 # Application definition
@@ -135,10 +135,11 @@ REST_FRAMEWORK = {
 }
 
 # define which origins are allowed
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
+# CORS_ALLOWED_ORIGINS = [
+#    "http://localhost:3000",
+#    "http://127.0.0.1:3000",
+#]
+CORS_ORIGIN_ALLOW_ALL = True
 FILE_UPLOAD_PERMISSIONS = 0o640
 
 # Default primary key field type

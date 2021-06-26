@@ -84,7 +84,7 @@ function ContactForm() {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Enter Phone Number *"
+                placeholder="98*-***-****"
                 name="phone"
                 value={phone}
                 onChange={(e) => handleChange(e)}
