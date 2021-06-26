@@ -6,7 +6,7 @@ from django.utils.timezone import now
 class Event(models.Model):
     title = models.CharField(max_length=50, unique=True, blank=False)
     slug = models.CharField(max_length=50, unique=True, blank=False)
-    date_of_event = models.DateTimeField(blank=False)
+    date_of_event = models.DateField(blank=False)
     description = models.TextField(blank=False)
     is_display = models.BooleanField(default=True)
     is_featured = models.BooleanField(default=False)

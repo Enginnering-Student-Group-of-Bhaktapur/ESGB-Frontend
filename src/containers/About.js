@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Helmet } from "react-helmet";
+
 
 import MemberCard from "../components/About/MemberCard";
 
@@ -60,6 +62,13 @@ function About() {
 
   return (
     <React.Fragment>
+      <Helmet>
+        <meta
+          name="description"
+          content="ESGB is an Engineering Student Group of Bhaktapur from Pulchowk Campus."
+        />
+        <title>About Us - Engineering Students Group of Bhaktapur(ESGB)</title>
+      </Helmet>
       <section>
         <div className="container py-5">
           <div id="team">

@@ -4,7 +4,7 @@ from .models import Member
 from .serializers import MemberListSerializer
 
 class ListingMemberView(ListAPIView):
-    queryset = Member.objects.filter(is_present = True)
+    queryset = Member.objects.order_by('registered_date').filter(is_present = True)
     permission_classes = (permissions.AllowAny, )
     serializer_class  = MemberListSerializer
     lookup_field = 'id'

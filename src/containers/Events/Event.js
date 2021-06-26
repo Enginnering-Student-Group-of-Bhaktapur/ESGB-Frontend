@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
+
 import axios from "axios";
 
 import FeaturedEvent from "../../components/Events/FeaturedEventFormat";
@@ -38,6 +40,13 @@ function Event() {
 
   return (
     <React.Fragment>
+      <Helmet>
+        <meta
+          name="description"
+          content="ESGB is an Engineering Student Group of Bhaktapur from Pulchowk Campus."
+        />
+        <title>Events - Enginnering Student Group of Bhaktapur(ESGB)</title>
+      </Helmet>
       <section className="container">
         <div className="row pt-4">
           <div className="col-md-8">{displayFeaturedEvent()}</div>
