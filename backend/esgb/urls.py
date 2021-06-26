@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/members/', include('aboutus.urls')),
     path('api/events/', include('events.urls')),
+    path('api/limelight/', include('limelight.urls')),
     path('api/contact/', include('contact.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

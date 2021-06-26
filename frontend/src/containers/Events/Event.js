@@ -41,7 +41,7 @@ function Event() {
       <section className="container">
         <div className="row pt-4">
           <div className="col-md-8">{displayFeaturedEvent()}</div>
-          <div className="col-md-4 shado p-3 event_shadow_bg">
+          <div className="col-md-4 shadow p-3 event_shadow_bg">
             <MediaEvent />
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -22,30 +22,30 @@ function NavBar() {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item active">
-              <Link className="nav-link" to="/">
+            <li className="nav-item">
+              <NavLink className="nav-link" activeClassName="active" to="/" exact={true}>
                 Home<span className="sr-only">(current)</span>
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              <NavLink className="nav-link" activeClassName="active" to="/about">
                 About Us
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/events">
+              <NavLink className="nav-link" activeClassName="active" to="/events">
                 Events
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/limelight">
+              <NavLink className="nav-link" activeClassName="active" to="/limelight">
                 Limelight
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">
+              <NavLink className="nav-link" activeClassName="active" to="/contact">
                 Contact Us
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

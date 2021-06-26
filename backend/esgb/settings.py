@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'aboutus',
     'events',
     'contact',
+    'limelight',
 ]
 
 MIDDLEWARE = [

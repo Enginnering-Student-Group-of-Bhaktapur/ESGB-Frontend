@@ -1,5 +1,5 @@
 from rest_framework.generics import ListAPIView
-from rest_framework import permissions, serializers
+from rest_framework import permissions
 from .models import Member
 from .serializers import MemberListSerializer
 

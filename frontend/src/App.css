@@ -109,3 +109,17 @@ footer a:hover{
 .event_shadow_bg{
   background-color: #e0e4ee !important;
 }
+
+.featured_event_title a{
+  color: #000000;
+}
+
+.featured_event_title a:hover{
+  text-decoration: none;
+  color: #3f2666;
+}
+
+/* limelight */
+.limelight_link:hover{
+  text-decoration: none;
+}
