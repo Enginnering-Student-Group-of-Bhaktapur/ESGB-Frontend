@@ -5,7 +5,7 @@ from .models import Event
 from .serializers import EventDetailSerializer, EventFeaturedSerializer, EventMediaSerializer
 
 class EventMediaView(ListAPIView):
-    queryset = Event.objects.order_by('-registered_date').filter(is_display = True, is_featured = False)
+    queryset = Event.objects.order_by('-registered_date').filter(is_display = True)
     permission_classes = (permissions.AllowAny, )
     serializer_class = EventMediaSerializer
     lookup_field = 'slug'

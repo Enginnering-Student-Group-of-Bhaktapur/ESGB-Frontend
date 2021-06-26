@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import FeaturedEvent from "../../components/Events/FeaturedEventFormat";
-import MediaEvent from "../../components/Events/MediaEvent";
+import MediaEvent from "../../components/Events/Media/MediaEvent";
 
 function Event() {
   const [featuredEvents, setFeaturedEvents] = useState([]);
