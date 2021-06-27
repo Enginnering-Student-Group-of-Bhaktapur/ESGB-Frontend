@@ -1,9 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import Banner from "../components/Home/Banner";
+import Carousel from "../components/Home/Carousel";
 import FounderMessage from "../components/Home/FounderMessage";
 import Dress from "../components/Home/Dress";
+
 
 function Home() {
   return (
@@ -15,7 +16,7 @@ function Home() {
         />
         <title>ESGB - Engineering Students Group of Bhaktapur(ESGB)</title>
       </Helmet>
-      <Banner />
+      <Carousel />
       <FounderMessage />
       <Dress />
     </React.Fragment>

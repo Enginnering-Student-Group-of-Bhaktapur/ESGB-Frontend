@@ -5,12 +5,12 @@ import FounderPic from '../../assets/img/founder.jpg';
 function FounderMessage() {
   return (
     <section>
-      <div class="container pt-4">
-        <div class="row">
-          <div class="col-md-12 text-center pb-4"></div>
+      <div className="container pt-4">
+        <div className="row">
+          <div className="col-md-12 text-center pb-4"></div>
         </div>
-        <div class="row py-1">
-          <div class="col-md-8 text-justify">
+        <div className="row py-1">
+          <div className="col-md-8 text-justify">
             <h2>Words from our Founder</h2>
             <p>
               Credere e per cosa cosa che sue dell'occhio non impetrata. Le
@@ -51,8 +51,8 @@ function FounderMessage() {
               bleak this me more thing floor at the the. Thing sought.
             </p>
           </div>
-          <div class="col-md-4">
-            <img src={FounderPic} class="img-fluid" alt="Founder" />
+          <div className="col-md-4">
+            <img src={FounderPic} className="img-fluid" alt="Founder" />
           </div>
         </div>
       </div>

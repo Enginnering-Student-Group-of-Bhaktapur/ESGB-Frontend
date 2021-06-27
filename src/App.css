@@ -15,19 +15,6 @@ body{
   margin: 100px;
 }
 
-/* top bar */
-#top_bar_section{
-  background-color: #110328;
-  color: #fff;
-}
-
-#top_bar_section a{
-  color: blanchedalmond;
-  text-decoration: none;
-}
-
-/* end of top bar */
-
 /* navigation bar */
 nav{
   background-color: #211836;
@@ -35,31 +22,12 @@ nav{
 }
 /* end of navigation bar */
 
-
-/* banner section */
-#banner{
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.67), rgba(23, 9, 46, 0.9)),
-  url('./assets/img/banner_1.jpg');    background-size: cover;
-  background-repeat: no-repeat;
-  color: #ffffff;
-
+/* carousel */
+.home_carousel_image{
+  width: 100%;
+  height: 95vh;
 }
-
-.banner_text{
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 40vh;
-}
-
-.banner_text h2{
-  margin-top: 100px;
-}
-
-.banner_text p{
-  margin-top: 30px;
-}
-/* end of banner section  */
-
+/* end of carousel */
 
 /* basic info section */
 #basic_info{
