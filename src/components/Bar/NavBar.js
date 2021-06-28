@@ -38,6 +38,11 @@ function NavBar() {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link" activeClassName="active" to="/members">
+                Member
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" activeClassName="active" to="/about">
                 About Us
               </NavLink>
