@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet";
 
 
 import MemberCard from "../components/About/MemberCard";
+import ContactForm from "../components/Contact/ContactForm";
+import Map from "../components/Contact/Map";
 
 function About() {
   const [members, setMembers] = useState([]);
@@ -84,6 +86,11 @@ function About() {
           </div>
         </div>
       </section>
+
+      {/* contact us section */}
+      <ContactForm />
+      <Map />
+      {/* end of contact us section  */}
     </React.Fragment>
   );
 }
