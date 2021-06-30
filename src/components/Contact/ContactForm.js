@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
-
+import axiosInstance from "../../HelperFunction/Axios";
 import {getCookie} from '../../HelperFunction/HelperFunction';
 
 function ContactForm() {
@@ -24,26 +23,24 @@ function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      axios.defaults.headers = {
+      axiosInstance.defaults.headers = {
         "Content-Type": "application/json",
         "X-CSRFToken": csrftoken,
       };
 
-      axios
-        .post("http://127.0.0.1:8000/api/contact/", {
+      axiosInstance
+        .post("/contact/", {
           name,
           email,
           phone,
           message,
         })
         .then((res) => {
-          window.scrollTo(0, 0);
           if (res.data[0] === "success") {
             console.log("Message has been sent successfully");
           }
         })
         .catch((err) => {
-          window.scrollTo(0, 0);
           console.log("Messege Sent Failed");
         });
     } catch (err) {
@@ -78,9 +75,12 @@ function ContactForm() {
                 value={email}
                 onChange={(e) => handleChange(e)}
               />
-              <label htmlFor="phone" className="pt-3">
+              <label htmlFor="phone" className="pt-3 mb-0">
                 Phone Number*
               </label>
+              <div style={{color: "white"}}>
+                <small>Phone Number must be in the form 98*-***-****</small>
+              </div>
               <input
                 type="text"
                 className="form-control"

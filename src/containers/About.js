@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axiosInstance from "../HelperFunction/Axios";
 import { Helmet } from "react-helmet";
 
 import MemberCard from "../components/About/MemberCard";
@@ -13,7 +13,7 @@ function About() {
     window.scrollTo(0, 0);
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/members/");
+        const res = await axiosInstance.get("/members/")
         setMembers(res.data.results);
       } catch (err) {
         console.log("Error Fetching Data");

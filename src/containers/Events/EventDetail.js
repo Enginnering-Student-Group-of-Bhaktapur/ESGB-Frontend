@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import { Helmet } from "react-helmet";
-
+import axiosInstance from "../../HelperFunction/Axios";
 
 import EventDetailFormat from "../../components/Events/EventDetailFormat";
 import MediaEvent from "../../components/Events/Media/MediaEvent";
@@ -12,8 +11,8 @@ function EventDetail(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
     const slug = props.match.params.slug;
-    axios
-      .get(`http://127.0.0.1:8000/api/events/${slug}/`)
+    axiosInstance
+      .get(`/events/${slug}/`)
       .then((res) => {
         setEvent(res.data);
       })

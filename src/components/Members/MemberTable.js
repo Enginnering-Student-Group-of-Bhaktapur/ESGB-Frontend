@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-
+import axiosInstance from "../../HelperFunction/Axios";
 import $ from "jquery";
 
 function MemberTable() {
@@ -10,8 +9,8 @@ function MemberTable() {
     window.scrollTo(0, 0);
     const fetchMemberData = async () => {
       try {
-        const res = await axios.get(
-          "http://127.0.0.1:8000/api/members/memberlist/"
+        const res = await axiosInstance.get(
+          "/members/memberlist/"
         );
         setMemberData(res.data.results);
       } catch (err) {

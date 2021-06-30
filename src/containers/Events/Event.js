@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-import axios from "axios";
+import axiosInstance from "../../HelperFunction/Axios";
 
 import FeaturedEvent from "../../components/Events/FeaturedEventFormat";
 import MediaEvent from "../../components/Events/Media/MediaEvent";
@@ -14,9 +14,7 @@ function Event() {
 
     const fetchFeaturedEventData = async () => {
       try {
-        const res = await axios.get(
-          "http://127.0.0.1:8000/api/events/featured/"
-        );
+        const res = await axiosInstance.get("/events/featured/");
         setFeaturedEvents(res.data.results);
       } catch (err) {
         console.log("Error Fetching Featured Event Data");
