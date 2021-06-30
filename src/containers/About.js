@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Helmet } from "react-helmet";
 
-
 import MemberCard from "../components/About/MemberCard";
 import ContactForm from "../components/Contact/ContactForm";
 import Map from "../components/Contact/Map";

@@ -1,7 +1,7 @@
 import React from "react";
 
-import Dress_1 from '../../assets/img/d1.jpg';
-import Dress_2 from '../../assets/img/d2.jpg';
+import Dress_1 from '../../assets/img/d1.png';
+import Dress_2 from '../../assets/img/d2.png';
 
 function Dress() {
   return (

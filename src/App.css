@@ -7,7 +7,8 @@ body{
 }
 
 .bg-mainColor{
-  background-color: #110328;
+  background-color: #2e3047;
+  color: #00d5ff!important;
 }
 
 /* NotFound */
@@ -17,7 +18,7 @@ body{
 
 /* navigation bar */
 nav{
-  background-color: #211836;
+  background-color: #2e3047;
   color: #ffffff!important;
 }
 /* end of navigation bar */
@@ -38,8 +39,12 @@ nav{
 
 /* footer  */
 footer{
-  background-color: #211836;
-  color: white;
+  background-color: #2e3047;
+  color: #ebecf0;
+}
+
+footer h5{
+  color: #00d5ff;
 }
 
 footer a{
@@ -48,7 +53,7 @@ footer a{
 }
 
 footer a:hover{
-  color: white;
+  color: #00d5ff;
   text-decoration: none;
 }
 

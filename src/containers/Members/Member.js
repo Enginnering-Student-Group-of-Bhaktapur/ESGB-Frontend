@@ -10,7 +10,7 @@ function Member() {
                     <div className="col-md-12 py-4">
                         <div className="py-2">
                             <h1>
-                                List of All Members of ESGB
+                                List of all members of ESGB
                             </h1>
                         </div>
                         <MemberTable />

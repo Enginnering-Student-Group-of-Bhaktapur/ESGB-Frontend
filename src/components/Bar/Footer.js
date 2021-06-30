@@ -1,9 +1,9 @@
 import React from "react";
-import Banner from "../../assets/img/banner_1.jpg";
-import Dress_1 from "../../assets/img/d1.jpg";
-import Dress_2 from "../../assets/img/d2.jpg";
+import Banner from "../../assets/img/banner.png";
+import Logo from "../../assets/img/logo.png"
 
 import {Link} from 'react-router-dom';
+
 
 function Footer() {
   return (
@@ -27,24 +27,21 @@ function Footer() {
           <div className="col-md-4">
             <h5>Information</h5>
             <span>
-              <Link to="">About Us</Link>
+              <Link to="/about">About Us</Link>
             </span>
             <br />
             <span>
-              <Link to="">Lime Light</Link>
+              <Link to="/limelight">Lime Light</Link>
             </span>
             <br />
             <span>
-              <Link to="">Our Events</Link>
+              <Link to="/events">Our Events</Link>
             </span>
             <br />
             <div className="dress_footer pt-5">
               <div className="row">
-                <div className="col-md-5">
-                  <img src={Dress_1} className="img-fluid" alt="dress 1" />
-                </div>
-                <div className="col-md-5">
-                  <img src={Dress_2} className="img-fluid" alt="dress 2" />
+                <div className="offset-md-2 col-md-6">
+                  <img src={Logo} className="img-fluid" alt="Logo" />
                 </div>
               </div>
             </div>
