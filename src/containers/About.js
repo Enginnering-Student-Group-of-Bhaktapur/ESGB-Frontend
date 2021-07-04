@@ -35,8 +35,8 @@ function About() {
 
     for(let i = 0; i < members.length; i+=3){
         result.push(
-            <div className="row" key = {i}>
-                <div className="team_member col-md-4">
+            <div className = "row" key = {i}>
+                <div className="team_member col-md-4 text-center">
                     {display[i]}
                 </div>
                 <div className="team_member col-md-4">
@@ -79,9 +79,7 @@ function About() {
               </div>
             </div>
 
-            <div className="team_photos row pb-3">
-                {displayMembers()}
-            </div>
+            {displayMembers()}
           </div>
         </div>
       </section>

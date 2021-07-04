@@ -1,11 +1,15 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import Banner from "../../assets/img/banner.png";
 
 function NavBar() {
+  
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container">
         <Link className="navbar-brand" to="/">
+          <img src={Banner} width="55px" className="mr-3" alt="logo" />
           Engineering Student Group of Bhaktapur
         </Link>
         <button

@@ -21,6 +21,11 @@ nav{
   background-color: #2e3047;
   color: #ffffff!important;
 }
+
+.navbar-dark .navbar-nav .nav-link.active{
+  color: #fff;
+}
+
 /* end of navigation bar */
 
 /* carousel */
@@ -65,15 +70,11 @@ footer a:hover{
   cursor: pointer;
 }
 
-.team_member img{
-  width: 100%;
-}
-
-.team_member .member_detail .name{
+.team_member .name{
   color: #000000;
 }
 
-.team_member .member_detail .position{
+.team_member .position{
   color: #232323;
   font-weight: 400;
 }
