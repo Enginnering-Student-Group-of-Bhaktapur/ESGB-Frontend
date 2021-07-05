@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axiosInstance from "../../HelperFunction/Axios";
-import $ from "jquery";
 
 function MemberTable() {
   const [memberData, setMemberData] = useState([]);
@@ -9,9 +8,7 @@ function MemberTable() {
     window.scrollTo(0, 0);
     const fetchMemberData = async () => {
       try {
-        const res = await axiosInstance.get(
-          "/members/memberlist/"
-        );
+        const res = await axiosInstance.get("/members/memberlist/");
         setMemberData(res.data.results);
       } catch (err) {
         console.log("Error Fetching Data");
@@ -19,20 +16,17 @@ function MemberTable() {
     };
 
     fetchMemberData();
-
-    $(document).ready(function () {
-      $("#memberDataTable").DataTable();
-      $("tbody .odd").html("");
-    });
   }, []);
 
   const displayMemberTable = () => {
     let result = [];
+    let id = 0;
 
     memberData.map((member) => {
+      id += 1;
       return result.push(
         <tr key={member.id}>
-          <td>{member.id}</td>
+          <td>{id}</td>
           <td>{member.name}</td>
           <td>{member.batch ? member.batch : "-"}</td>
           <td>{member.faculty ? member.faculty : "-"}</td>
