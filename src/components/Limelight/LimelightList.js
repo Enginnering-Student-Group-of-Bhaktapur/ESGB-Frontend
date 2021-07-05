@@ -24,7 +24,7 @@ function LimelightList() {
         let result = [];
 
         limelightList.map((limelight) => {
-            return result.push(<LimelightMediaFormat limelight = {limelight} />)
+            return result.push(<LimelightMediaFormat limelight = {limelight} key={limelight.id} />)
         })
 
         return result;
