@@ -2,10 +2,12 @@ import csv
 import os
 from aboutus.models import Member
 from events.models import Event
+from esgb import settings
 
 def run():
     # Uploading the member data
-    member_file = open('/media/nirajan/1C067838067814CC1/data/member.csv')
+    file_path = os.path.join(settings.BASE_DIR, 'initial_data/member.csv')  
+    member_file = open(file_path)
     read_member_file = csv.reader(member_file)
 
     Member.objects.all().delete()
@@ -21,7 +23,8 @@ def run():
         count += 1
 
     # Uploading the member data
-    event_file = open('/media/nirajan/1C067838067814CC1/data/event_data.csv')
+    file_path = os.path.join(settings.BASE_DIR, 'initial_data/event_data.csv')  
+    event_file = open(file_path)
     read_event_file = csv.reader(event_file)
 
     Event.objects.all().delete()
