@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import axios from "axios";
+import axiosInstance from "../../../HelperFunction/Axios";
 
 import MediaEventFormat from "./MediaEventFormat";
 
@@ -10,7 +10,7 @@ function MediaEvent() {
 
     const fetchMediaEventData = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/events/recent/");
+        const res = await axiosInstance.get("/events/recent/");
         setMediaEvents(res.data.results);
       } catch (err) {
         console.log("Error Fetching Media Event Data");
