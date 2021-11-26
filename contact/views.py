@@ -1,6 +1,5 @@
 from rest_framework import permissions
 from rest_framework.views import APIView
-from .models import Contact
 from rest_framework.response import Response
 
 from .serializers import ContactSerializer
@@ -16,4 +15,5 @@ class ContactCreateView(APIView):
             serializer.save()
             return Response({'success': 'Message Sent Successfully'})
         else:
-            return Response({'error': 'Message Failed to sent'})
+            print(serializer.errors)
+            return Response(serializer.errors)

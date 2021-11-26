@@ -12,6 +12,8 @@ function ContactForm() {
     message: "",
   });
 
+  const [response, setResponse] = useState({})
+
   const { name, email, phone, message } = formData;
 
   const handleChange = (e) => {
@@ -36,9 +38,8 @@ function ContactForm() {
           message,
         })
         .then((res) => {
-          if (res.data[0] === "success") {
-            console.log("Message has been sent successfully");
-          }
+            console.log(res.data);
+            setResponse(res.data);
         })
         .catch((err) => {
           console.log("Messege Sent Failed");
@@ -48,9 +49,22 @@ function ContactForm() {
     }
   };
 
+  const handleResponse = () => {
+    let result = [];
+    
+    if(response.length > 0){
+      console.log("Hello");
+    }
+  }
+
   return (
     <section className="bg-mainColor text-white">
       <div className="container">
+        <div className="row">
+          <div className="col-md-12 response">
+            {handleResponse()}
+          </div>
+        </div>
         <div className="row pt-5 pb-3">
           <div className="col-md-8 contact-form-container">
             <h1 className="title-1-big">Contact Us Now</h1>
