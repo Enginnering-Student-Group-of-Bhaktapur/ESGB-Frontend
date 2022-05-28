@@ -15,6 +15,7 @@ function EventDetail(props) {
       .get(`/events/${slug}/`)
       .then((res) => {
         setEvent(res.data);
+        console.log(res.data);
       })
       .catch((err) => {
         console.log("Error Fetching Data");

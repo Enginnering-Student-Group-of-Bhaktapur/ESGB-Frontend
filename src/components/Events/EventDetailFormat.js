@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from 'react-markdown'
 
 import EventGallery from "./EventLightGallery";
 
@@ -6,8 +7,8 @@ function EventDetailFormat({ event }) {
   const event_sub_image = [];
   const max_no_of_images = 10;
 
-  for(let i = 1; i <= max_no_of_images; i++){
-    if(event["image_".concat(i)] != null){
+  for (let i = 1; i <= max_no_of_images; i++) {
+    if (event["image_".concat(i)] != null) {
       event_sub_image.push(event["image_".concat(i)]);
     }
   }
@@ -22,12 +23,13 @@ function EventDetailFormat({ event }) {
         </span>
       </div>
       <div className="main_image">
+        {console.log(event)}
         <img src={event.main_image} alt="main" className="img-fluid" />
       </div>
       <div className="event description">
-        <p className="py-4">{event.description}</p>
+        <ReactMarkdown>{event.description}</ReactMarkdown>
       </div>
-      <EventGallery event_images = {event_sub_image} />
+      <EventGallery event_images={event_sub_image} />
     </div>
   );
 }

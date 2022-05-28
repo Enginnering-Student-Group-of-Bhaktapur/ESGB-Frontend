@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from 'react-markdown'
 
 function MediaEventFormat({ mediaEvent }) {
   return (
@@ -12,7 +13,7 @@ function MediaEventFormat({ mediaEvent }) {
         />
         <div className="media-body">
           <h6 className="m-0">{mediaEvent.title}</h6>
-          <p className="m-0">{mediaEvent.description.slice(0, 60)}...</p>
+          <ReactMarkdown>{mediaEvent.description.slice(0, 60)}</ReactMarkdown>
           <a href={`/events/${mediaEvent.slug}`}>Continue reading...</a>
         </div>
       </div>
