@@ -19,7 +19,7 @@ class ContactCreateView(APIView):
             serializer.save()
             return Response({'success': 'Message Sent Successfully'})
         else:
-            print(serializer.errors)
+            # print(serializer.errors)
             return Response(serializer.errors)
 
 # Add this CBV

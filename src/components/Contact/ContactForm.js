@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import axiosInstance from "../../HelperFunction/Axios";
 import {getCookie} from '../../HelperFunction/HelperFunction';
+import Alert from '../Alert';
 
 function ContactForm() {
   const csrftoken = getCookie("csrftoken");
+  const [responseContactForm, setResponseContactForm] = useState({});
 
   const [formData, setFormData] = useState({
     name: "",
@@ -11,8 +13,6 @@ function ContactForm() {
     phone: "",
     message: "",
   });
-
-  const [response, setResponse] = useState({})
 
   const { name, email, phone, message } = formData;
 
@@ -38,8 +38,7 @@ function ContactForm() {
           message,
         })
         .then((res) => {
-            console.log(res.data);
-            setResponse(res.data);
+            setResponseContactForm(res.data);
         })
         .catch((err) => {
           console.log("Messege Sent Failed");
@@ -49,11 +48,10 @@ function ContactForm() {
     }
   };
 
-  const handleResponse = () => {
-    let result = [];
-    
-    if(response.length > 0){
-      console.log("Hello");
+  const displayAlert = () => {
+    if(Object.keys(responseContactForm).length !== 0){
+      if(responseContactForm["success"] !== undefined)
+      return <Alert type = "success" msg = "Contact Form Submitted Successfully"></Alert>
     }
   }
 
@@ -61,8 +59,8 @@ function ContactForm() {
     <section className="bg-mainColor text-white">
       <div className="container">
         <div className="row">
-          <div className="col-md-12 response">
-            {handleResponse()}
+          <div className="col-md-12 pt-4">
+            {displayAlert()}
           </div>
         </div>
         <div className="row pt-5 pb-3">

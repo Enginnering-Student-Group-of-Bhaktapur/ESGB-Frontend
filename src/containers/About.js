@@ -14,6 +14,7 @@ function About() {
     const fetchData = async () => {
       try {
         const res = await axiosInstance.get("/members/")
+        console.log("Executive Members : ", res.data.results);
         setMembers(res.data.results);
       } catch (err) {
         console.log("Error Fetching Data");
